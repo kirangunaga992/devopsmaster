@@ -9,18 +9,13 @@ pipeline{
             }
             
         }
-    }
-    stages{
         stage("disk-filesystem"){
             steps{
                 sh '''
                 df -kh
                 '''
             }
-            
         }
-    }
-    stages{
         stage("Ram-used"){
             steps{
                 sh '''
