@@ -1,0 +1,33 @@
+pipeline{
+    agent any
+    stages{
+        stage("uptime"){
+            steps{
+                sh '''
+                uptime
+                '''
+            }
+            
+        }
+    }
+    stages{
+        stage("disk-filesystem"){
+            steps{
+                sh '''
+                df -kh
+                '''
+            }
+            
+        }
+    }
+    stages{
+        stage("Ram-used"){
+            steps{
+                sh '''
+                free -h
+                '''
+            }
+            
+        }
+    }
+}
