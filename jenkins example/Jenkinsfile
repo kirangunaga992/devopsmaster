@@ -32,5 +32,13 @@ pipeline{
             }
             
         }
+        stage("poll-scm"){
+            steps{
+                sh '''
+                checking weather poll scm working or not
+                '''
+            }
+            
+        }
     }
 }
